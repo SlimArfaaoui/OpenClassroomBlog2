@@ -1,0 +1,19 @@
+<div [ngClass]="getClassLove()">
+    <div class="d-flex w-100 justify-content-between">
+        <h3> Love : {{loveIts}}</h3>
+        <div class="d-flex flex-column">
+            <small>{{ created_at }}</small>
+        </div>
+    </div>
+    <h5 class="mb-1">{{title}}</h5>
+    <p class="mb-1">{{content}}</p>
+    <div class="d-flex w-10 justify-content-between">
+        <div>
+            <button class="btn btn-success mr-2" (click)="onLoveIt(post)">Love It</button>
+            <button class="btn btn-danger" (click)="onDontLoveIt(post)">Dont Love It</button>
+        </div>
+        <a (click)="onDeletePost(post)" style="cursor: pointer" class="text-right">
+            <fa name="trash" size="2x"></fa>
+        </a>
+    </div>
+</div>

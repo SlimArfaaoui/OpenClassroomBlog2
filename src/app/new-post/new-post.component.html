@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center">
+  <div class="card p-5" style="width: 40em">
+    <h3>Ajouter un post</h3>
+    <form [formGroup]="postForm" (ngSubmit)="onSavePost()">
+      <div class="form-group">
+        <label for="title">Titre <span class="text-danger font-weight-bold">*</span></label>
+        <input type="text" id="title" class="form-control" formControlName="title">
+      </div>
+      <div class="form-group">
+        <label for="content">Contenu <span class="text-danger font-weight-bold">*</span></label>
+        <textarea id="content" class="form-control" formControlName="content" rows="5" style="resize: none"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="postForm.invalid">Enregistrer</button>
+    </form>
+  </div>
+</div>
